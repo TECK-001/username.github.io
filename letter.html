@@ -1,0 +1,96 @@
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Gửi Em</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffebee;
+            padding: 50px;
+        }
+        
+        .letter {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+            max-width: 600px;
+        }
+        
+        h2 {
+            color: #d81b60;
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+        }
+        
+        .heart {
+            position: absolute;
+            top: -10vh;
+            color: red;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="letter">
+        <h2>Gửi bé Thy của anh,</h2>
+        <p>Thy à, có lẽ anh không thể diễn tả hết bằng lời những gì anh cảm nhận về em. Em không chỉ là người yêu, mà em còn là nguồn động viên lớn lao, là người bạn đời mà anh luôn mong mỏi. Trong những lúc anh cảm thấy gần như bất lực với mọi thứ, những
+            lúc mệt mỏi và tuyệt vọng, chính em là người đã kéo anh ra khỏi những bóng tối, giúp anh tìm thấy lại chính mình và cuộc sống.</p>
+
+        <p>Mỗi ngày bên em là một ngày anh cảm nhận được giá trị của tình yêu. Em đã đến và làm cho mọi thứ trở nên ý nghĩa hơn. Anh đã tìm thấy một người đồng hành tuyệt vời, một người mà anh không chỉ yêu thương mà còn ngưỡng mộ. Em có thể là một người
+            giản dị trong cách thể hiện tình yêu, nhưng đối với anh, mỗi hành động của em đều được anh giữ trong tim. Chỉ đơn giản là em luôn hiện diện bên anh mỗi khi anh cần, đều là những điều anh rất trân trọng.</p>
+
+        <p>Em là lý do khiến anh tin rằng những điều tốt đẹp sẽ luôn đến với những người biết yêu thương và biết trân trọng. Những ngày tháng bên em là những khoảnh khắc mà anh sẽ mãi mang theo trong lòng. Mỗi lần nhìn vào em, anh lại thấy một thế giới đầy
+            màu sắc, đầy yêu thương. Anh đã không còn cảm thấy sợ hãi khi đối diện với khó khăn, vì anh biết rằng với em bên cạnh, mọi thử thách chỉ là một phần nhỏ trong hành trình mà anh và em sẽ cùng nhau đi qua.</p>
+
+        <p>Anh mong rằng, chúng ta sẽ cùng nhau viết tiếp câu chuyện này, không chỉ trong một năm, hai năm hay vài thập kỷ, mà là mãi mãi. Anh biết rằng tình yêu của chúng ta sẽ vượt qua mọi rào cản, mọi thử thách, và dù có gặp bao nhiêu khó khăn, chúng
+            ta sẽ luôn giữ chặt tay nhau. Em là người anh muốn chia sẻ mọi khoảnh khắc trong cuộc sống, là người anh muốn cùng nhau tạo dựng tương lai. Cùng em, anh không sợ bất cứ điều gì.</p>
+
+        <p>Yêu em không chỉ là yêu những điều tuyệt vời em mang lại mà còn là yêu tất cả những gì làm nên em, yêu cả những lúc em buồn, yêu cả những lúc em mệt mỏi. Anh yêu em vì em là chính em, và vì anh biết em luôn là người quan tâm đến anh, chăm sóc
+            cho anh trong mọi tình huống. Em là ngọn lửa ấm áp trong cuộc sống của anh, là lý do khiến anh mỗi ngày thức dậy với niềm tin và hy vọng.</p>
+
+        <p>Với anh, chỉ cần em ở đây, thế giới này sẽ luôn trở nên tươi đẹp. Cảm ơn em vì đã là một phần không thể thiếu trong cuộc sống của anh. Anh yêu em bằng tất cả trái tim mình, và anh sẽ mãi yêu em, cho đến hết cuộc đời này.</p>
+
+        <p>Anh Yêu Em.</p>
+        <p><strong>HảoBell (Nguyễn Văn Teck) ❤️</strong></p>
+
+        <audio id="background-audio" autoplay loop>
+            <source src="anhyeuem.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.classList.add("heart");
+            let size = Math.random() * 20 + 10;
+            heart.style.fontSize = `${size}px`;
+            let left = Math.random() * window.innerWidth;
+            heart.style.left = `${left}px`;
+            heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+
+</html>
